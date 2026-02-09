@@ -109,26 +109,6 @@ button:hover{ background:#ff0000; color:black; }
 footer{ text-align:center; padding:10px; font-family:'Cinzel', serif; }
 footer a{ color:#ff0000; text-decoration:none; font-family:'Cinzel', serif; }
 footer a:hover{ background:#ff0000; color:black; padding:3px 6px; }
-
-.floating-btn{
-  position:fixed;
-  bottom:20px;
-  right:10px;
-  background:black;
-  border:2px solid #ff0000;
-  color:#d4af37;
-  padding:12px 16px;
-  font-family:'Cinzel', serif;
-  cursor:pointer;
-  z-index:999;
-  box-shadow:0 0 10px #ff000055;
-  transition:.2s;
-}
-.floating-btn:hover{
-  background:#ff0000;
-  color:black;
-  transform:scale(1.08);
-}
 </style>
 </head>
 
@@ -147,10 +127,6 @@ footer a:hover{ background:#ff0000; color:black; padding:3px 6px; }
     © Inaudível Por Favor
   </a>
 </footer>
-
-<button class="floating-btn" onclick="window.location.href='https://gnuipf.github.io/ipf_db/'">
-  NUKE DB
-</button>
 
 <script>
 const products = [
@@ -218,7 +194,7 @@ function prevSlide(id){ showSlide(id,-1); }
 
 setInterval(()=>{
   products.forEach((p,i)=>{ if(p.images.length>1) nextSlide(i); });
-},4000);
+},10000);
 </script>
 
 </body>
